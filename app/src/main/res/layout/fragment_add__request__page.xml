@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nav_pages.Add_Request_Page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="@string/all_request"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginVertical="10dp"
+
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:fontFamily="@font/robotomedium"
+            android:text="@string/kindly_make_blood_donation_request_and_we_alert_our_generous_donors_to_help_you_out"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/robotoregular"
+            android:drawableTint="@color/colorPrimary"
+            android:padding="20dp"
+            android:paddingLeft="10dp"
+            android:text="@string/personal_information"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingRight="20dp">
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:hint="@string/name"/>
+
+            <EditText
+                android:id="@+id/edit_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:hint="@string/age"/>
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/robotoregular"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"/>
+
+            <EditText
+                android:id="@+id/edit_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:hint="@string/my_location"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_baseline_edit_location_alt_24"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/colorPrimary"
+            android:padding="20dp"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/location_of_donation"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_userLocation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2"
+            android:hint="@string/your_location"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/buttonshape"
+            android:text="@string/select"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_group_red"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/colorPrimary"
+            android:padding="20dp"
+            android:paddingStart="10dp"
+            android:text="@string/blood_group"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <RadioButton
+                android:id="@+id/bloodGrp_A_P"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/a" />
+
+            <RadioButton
+                android:id="@+id/bloodGrp_B_P"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/b" />
+
+            <RadioButton
+                android:id="@+id/bloodGrp_AB_P"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/ab" />
+
+            <RadioButton
+                android:id="@+id/bloodGrp_O_P"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/o" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <RadioButton
+                android:id="@+id/bloodGrp_A_N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:text="@string/a" />
+
+            <RadioButton
+                android:id="@+id/bloodGrp_B_N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:text="B-" />
+
+            <RadioButton
+                android:id="@+id/bloodGrp_AB_N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="AB-" />
+
+            <RadioButton
+                android:id="@+id/bloodGrp_O_N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
+                android:background="@drawable/outlinebuttonshape"
+                android:padding="5dp"
+                android:text="O-" />
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_group_red"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorPrimary"
+                android:padding="20dp"
+                android:fontFamily="@font/robotoregular"
+                android:paddingLeft="10dp"
+                android:text="@string/unit_need"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn_addUnit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circlebutton"
+                android:text="+"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/unitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:text="@string/_0"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="@color/colorDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_removeUnit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circlebutton"
+                android:text="-"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold"></Button>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/buttonshape"
+            android:text="@string/publish"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/colorAccent"/>
+    </LinearLayout>
+</ScrollView>

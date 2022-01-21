@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "502259746570",
+    "firebase_url": "https://oneblood-4f0c7-default-rtdb.firebaseio.com",
+    "project_id": "oneblood-4f0c7",
+    "storage_bucket": "oneblood-4f0c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502259746570:android:03c1459a363a9f39b21cf3",
+        "android_client_info": {
+          "package_name": "com.example.blooddonationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502259746570-u2keqabhpg1hsq29cr9h8vhv0qebvaer.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEDbzAoHA_9ZKFo7qkM7bgE1U9v9RX5z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502259746570-u2keqabhpg1hsq29cr9h8vhv0qebvaer.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502259746570:android:608c73a7ae8068f5b21cf3",
+        "android_client_info": {
+          "package_name": "com.example.lifeshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502259746570-u2keqabhpg1hsq29cr9h8vhv0qebvaer.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEDbzAoHA_9ZKFo7qkM7bgE1U9v9RX5z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502259746570-u2keqabhpg1hsq29cr9h8vhv0qebvaer.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
