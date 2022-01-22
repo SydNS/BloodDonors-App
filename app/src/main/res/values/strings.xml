@@ -73,4 +73,9 @@
     <string name="request_details">Request Details</string>
     <string name="address_address">Address : address</string>
     <string name="contact">Contact</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="applogo">Applogo</string>
+    <string name="emailaddy">Email Address</string>
+    <string name="password">Password</string>
 </resources>
