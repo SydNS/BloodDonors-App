@@ -7,6 +7,7 @@
     <string name="email">Email</string>
     <string name="phone_no">Phone No</string>
     <string name="all_request">All Request</string>
+    <string name="makearequest">Make A Request</string>
     <string name="personal_information">Personal Information</string>
     <string name="age">Age</string>
     <string name="name">Name</string>
