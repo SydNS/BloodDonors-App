@@ -24,6 +24,7 @@ class Login : AppCompatActivity() {
         val user=auth.currentUser
         if(user!=null){
             val intent = Intent(this, DashBorad::class.java) ;startActivity(intent)
+            finish()
         }
         else{
 
@@ -39,6 +40,8 @@ class Login : AppCompatActivity() {
 
         text_register.setOnClickListener {
             val intent = Intent(this,Register::class.java) ;startActivity(intent)
+            finish()
+
         }
 
         button_login.setOnClickListener {
@@ -51,6 +54,12 @@ class Login : AppCompatActivity() {
         }
 
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right)
+    }
+
     private fun loginUser(email: String,  password: String) {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {

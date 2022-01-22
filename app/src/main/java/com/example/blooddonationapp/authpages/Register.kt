@@ -12,6 +12,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_register.*
 
+
+
+
+
 class Register : AppCompatActivity() {
 
     private var mDatabase: DatabaseReference? = null
@@ -41,7 +45,10 @@ class Register : AppCompatActivity() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Users")
 
         text_login.setOnClickListener {
-            val intent = Intent(this,Login::class.java) ;startActivity(intent)
+            val intent = Intent(this,Login::class.java)
+            startActivity(intent)
+            finish()
+
         }
 
        button_register.setOnClickListener {
@@ -98,5 +105,10 @@ class Register : AppCompatActivity() {
                  true
             }
         }
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 }
