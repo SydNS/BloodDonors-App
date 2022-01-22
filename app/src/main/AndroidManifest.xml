@@ -11,10 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestDetails"></activity>
+        <activity android:name=".RequestDetails"
+            android:parentActivityName=".DashBorad"/>
         <activity android:name=".DashBorad" />
-        <activity android:name=".authpages.Register" />
-        <activity android:name=".authpages.Login">
+        <activity android:name=".authpages.Register"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".authpages.Login"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
