@@ -11,17 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestDetails"></activity>
+        <activity android:name=".RequestDetails"
+            android:parentActivityName=".DashBorad"/>
         <activity android:name=".DashBorad" />
-        <activity android:name=".authpages.Register" />
-        <activity android:name=".authpages.Login">
+        <activity android:name=".authpages.Register"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".authpages.Login"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".MainActivity"
+         android:theme="@style/Splashtheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

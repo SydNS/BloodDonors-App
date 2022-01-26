@@ -41,5 +41,8 @@ dependencies {
     //permission
     implementation 'com.karumi:dexter:5.0.0'
 
+    //google auth client
+    implementation 'com.google.android.gms:play-services-auth:20.0.1'
+
 }
 apply plugin: 'com.google.gms.google-services'
