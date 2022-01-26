@@ -35,7 +35,7 @@ class Add_Request_Page : Fragment(), RadioGroup.OnCheckedChangeListener {
     var firebaseUser :FirebaseUser?=null
     var firebaseAuth:FirebaseAuth?=null
     var userId:String?=null
-    var userEmail:String?=null
+    var useremail:String?=null
 
     //database for Request
     private var mDatabaseRequest: DatabaseReference? = null
@@ -50,7 +50,7 @@ class Add_Request_Page : Fragment(), RadioGroup.OnCheckedChangeListener {
         firebaseUser=firebaseAuth?.currentUser
         if(firebaseUser!=null){
           userId=firebaseUser?.uid
-          userEmail=firebaseUser?.email
+          useremail=firebaseUser?.email
         }
         else{
             val intent = Intent(context, Register::class.java) ;startActivity(intent)
@@ -135,9 +135,9 @@ class Add_Request_Page : Fragment(), RadioGroup.OnCheckedChangeListener {
 
     private fun sendRequestFirebase() {
         //create request model
-        val requestModel:Request = Request(name,age,phone,userLocation,hospital,unitNedded.toString(),bloodGrp,userId,userEmail)
+        val requestModel = Request(name,age,phone,userLocation,hospital,unitNedded.toString(),bloodGrp,userId,useremail)
         mDatabaseRequest!!.child(userId!!).setValue(requestModel)
-        Toast.makeText(context, "Request Submitted As$userEmail", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Request Submitted As$useremail", Toast.LENGTH_SHORT).show()
 
         //goto home page
         val intent = Intent(context, DashBorad::class.java) ;startActivity(intent)

@@ -75,11 +75,13 @@ class RequestDetails : AppCompatActivity(), PermissionListener {
         permission: PermissionRequest?,
         token: PermissionToken?
     ) {
-        TODO("Not yet implemented")
+        Toast.makeText(this,"You need to enable this ",Toast.LENGTH_SHORT).show()
+
     }
 
     override fun onPermissionDenied(response: PermissionDeniedResponse?) {
-        TODO("Not yet implemented")
+        Toast.makeText(this,"You need to enable this ",Toast.LENGTH_SHORT).show()
+        onBackPressed()
     }
 
 }

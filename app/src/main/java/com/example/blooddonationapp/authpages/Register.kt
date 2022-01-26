@@ -2,6 +2,7 @@ package com.example.blooddonationapp.authpages
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.blooddonationapp.DashBorad
@@ -44,10 +45,16 @@ class Register : AppCompatActivity() {
         auth= FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().getReference("Users")
 
+        val scrnsize:DisplayMetrics= DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(scrnsize)
+
+
+        Toast.makeText(this,"${scrnsize.heightPixels} and ${scrnsize.widthPixels}",Toast.LENGTH_LONG).show()
         text_login.setOnClickListener {
             val intent = Intent(this,Login::class.java)
             startActivity(intent)
-            finish()
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+//            finish()
 
         }
 

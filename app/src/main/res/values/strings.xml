@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BloodDonationApp henry ssempaka</string>
+    <string name="app_name">BloodDonationApp Florence Mbabazi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="checked">checked</string>
@@ -77,4 +77,11 @@
     <string name="emailaddy">Email Address</string>
     <string name="password">Password</string>
     <string name="save_a_life_today">Save A Life Today</string>
+
+
+<!--    google signin  key-->
+
+    <string name="googlesignin">
+        502259746570-2k2mborurtcqilgq21cbf5ndn6m6sjvd.apps.googleusercontent.com
+    </string>
 </resources>

@@ -38,7 +38,7 @@ class HomePage : Fragment() {
 //                val list = ArrayList<Request>()
                 if(dataSnapshot.exists()){
                     for (e in dataSnapshot.children){
-                        var item =e!!.getValue(Request::class.java)
+                        val item =e!!.getValue(Request::class.java)
                         requestList?.add(item!!)
                     }
                     Log.e("f","finish")

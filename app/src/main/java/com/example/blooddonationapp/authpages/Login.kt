@@ -3,9 +3,17 @@ package com.example.blooddonationapp.authpages
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.example.blooddonationapp.DashBorad
 import com.example.blooddonationapp.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.edit_email
@@ -17,6 +25,8 @@ class Login : AppCompatActivity() {
 
     var email:String?=""; var password:String?=""
 
+    lateinit var mGoogleSignInClient: GoogleSignInClient
+    private val RC_SIGN_IN = 9001
 
     override fun onStart() {
         super.onStart()
@@ -40,7 +50,8 @@ class Login : AppCompatActivity() {
 
         text_register.setOnClickListener {
             val intent = Intent(this,Register::class.java) ;startActivity(intent)
-            finish()
+            overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right)
+//            finish()
 
         }
 
@@ -53,6 +64,16 @@ class Login : AppCompatActivity() {
             }
         }
 
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.googlesignin))
+            .requestEmail()
+            .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        sign_in_button.setOnClickListener {
+            Toast.makeText(this,"You raise me up",Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun finish() {

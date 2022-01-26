@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".authpages.Login">
+    tools:context=".authpages.Register">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linear"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/loginbg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,40 +25,54 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/robotobold"
-                android:text="@string/login"
-                android:textAlignment="center"
-                android:textColor="@color/colorDark"
-                android:textSize="45sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_register"
+                android:id="@+id/text_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/robotomedium"
-                android:text="@string/register"
+                android:text="@string/login"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkLight"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-        </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="100dp"
-            android:src="@drawable/henry"
-            android:contentDescription="@string/applogo" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotobold"
+                android:text="@string/register"
+                android:textAlignment="center"
+                android:textColor="@color/colorDark"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/applogo"
+                android:src="@drawable/henry" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittextshape"
+                android:digits="0123456789"
+                android:fontFamily="@font/robotomedium"
+                android:hint="@string/phone_no"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="15dp"
+                android:textColorHint="@color/colorDark" />
 
             <EditText
                 android:id="@+id/edit_email"
@@ -66,10 +81,10 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/edittextshape"
                 android:fontFamily="@font/robotomedium"
-                android:hint="@string/emailaddy"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:padding="15dp"
-                android:textColorHint="@color/colorDarkLight" />
+                android:textColorHint="@color/colorDark" />
 
             <EditText
                 android:id="@+id/edit_password"
@@ -79,23 +94,23 @@
                 android:background="@drawable/edittextshape"
                 android:fontFamily="@font/robotomedium"
                 android:hint="@string/password"
+                android:inputType="textPassword"
                 android:padding="15dp"
-                android:textColorHint="@color/colorDarkLight"/>
+                android:textColorHint="@color/colorDark" />
 
             <Button
-                android:id="@+id/button_login"
+                android:id="@+id/button_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="@font/robotobold"
                 android:padding="15dp"
-                android:text="@string/login"
+                android:text="@string/register"
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
